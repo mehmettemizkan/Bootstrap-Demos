@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol</title>
+    <link rel="icon" href="LogoIcon.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Full-width input fields */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav-container">
+        <!-- büyük ekran nav -->
+        <nav class="navigator">
+            <div>
+                <a href="index.html" id="logo"><img src="images/Logo.png" alt="" height="70px" width="200px"></a>
+            </div>
+            <div class="nav-content">
+                <div class="nav-content-menu">
+                    <ul>
+                        <li><a href="index.html">Anasayfa</a></li>
+                        <li><a href="Contact.html">İletişim</a></li>
+                        <li><a href="AboutUs.html">Hakkımızda</a></li>
+                    </ul>
+                </div>
+                <div class="nav-content-menu">
+                    <ul>
+                        <li><a href="Login.html">Giriş Yap</a></li>
+                        <li><a href="SignUp.html">Kayıt Ol</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- hamburger menu start -->
+        <div class="burger-menu">
+            <div style="width: 100%; background-color: rgb(27, 11, 84);">
+                <a href="index.html" id="logo"><img src="images/Logo.png" alt="" height="70px" width="200px"></a>
+            </div>
+
+            <!-- button start -->
+            <!--  -->
+            <input type="checkbox" id="navi-toggle" />
+
+            <label for="navi-toggle" class="hamburger-button">
+                <span class="icon"></span>
+            </label>
+
+            <div class="background"></div>
+            <!-- button end -->
+
+            <!-- hamburger menu items start -->
+            <nav class="nav">
+                <ul class="list">
+                    <li class="item"> <a href="index.html" class="link"> Anasayfa </a> </li>
+                    <li class="item"> <a href="Contact.html" class="link">İletişim</a></li>
+                    <li class="item"> <a href="AboutUs.html" class="link">Hakkımızda</a></li>
+                    <li class="item"> <a href="Login.html" class="link">Giriş Yap</a></li>
+                    <li class="item"> <a href="SignUp.html" class="link">Kayıt Ol</a></li>
+                </ul>
+            </nav>
+            <!-- hamburger menu items end -->
+        </div>
+        <!-- hamburger menu end -->
+    </div>
+
+    <div class="signup-container">
+        <h1>Kayıt Ol</h1>
+        <p style="margin: 5px 0;">Bir hesap oluşturmak için aşağıdaki formu doldurun.</p>
+        <hr id="signup-hr">
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="örnek@gmail.com" name="email" required>
+
+        <label for="psw"><b>Şifre</b></label>
+        <input type="password" placeholder="Şifreniz" name="psw" required>
+
+        <label for="psw-repeat"><b>Şifre Tekrar</b></label>
+        <input type="password" placeholder="Şifreniz" name="psw-repeat" required>
+
+        <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Beni Hatırla
+        </label>
+
+        <p>Kayıt Ol'a tıklayarak <a href="#" style="color:dodgerblue">Üyelik Koşulları</a>nı kabul ediyorum.</p>
+
+        <button type="submit" class="signup-button">Kayıt Ol</button>
+
+    </div>
+
+    <!-- Clock Start -->
+    <div id="clockContainer">
+
+        <div id="clock"></div>
+        <div id="day"></div>
+    </div>
+    <!-- Clock End -->
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content flex-35">
+                <a href="index.html"><img src="images/Logo.png" id="footer-brand" alt="" height="70px"
+                        width="200px"></a>
+                <p>
+                    Yazılım ve dijital pazarlama alanında çalışan Phoenix Tech hizmetinizde.
+                </p>
+
+            </div>
+            <div class="footer-content flex-20">
+                <h4>Kurumsal</h4>
+                <a href="">Hakkımızda</a>
+                <a href="">Sık Sorulanlar</a>
+                <a href="">Bizimle Çalışanlar</a>
+            </div>
+            <div class="footer-content flex-25">
+                <h4>Hizmetler</h4>
+                <a href="">Web Tasarım</a>
+                <a href="">Mobil Uygulama Geliştirme</a>
+                <a href="">SEO & SEM</a>
+                <a href="">Özel Yazılım</a>
+            </div>
+            <div class="footer-content flex-20">
+                <h4>Destek</h4>
+                <a href="">Sık Sorulanlar</a><a href="">Whatsapp İletişim</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Saat ve Gün Scripti -->
+    <script>
+        function showTime() {
+            var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            var day = date.toLocaleDateString("tr-TR", options);
+
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+            var time = h + ":" + m + ":" + s;
+            document.getElementById("clock").innerText = time;
+            document.getElementById("day").innerText = day;
+
+            setTimeout(showTime, 1000);
+        }
+        showTime();
+    </script>
+</body>
+
+</html>
