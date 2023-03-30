@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header div ul li {
+  float: left;
+  list-style: none;
+  margin: 15px 20px 0px 0;
+}
+header div ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+header {
+  background-color: darkslategray;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
