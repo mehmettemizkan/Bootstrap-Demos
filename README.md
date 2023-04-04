@@ -14,3 +14,7 @@ Music Shop Web Site
 Instagram Clone
 
 ![instagram](https://user-images.githubusercontent.com/56386597/229279037-a6b1216b-1312-468d-87ac-e937e298f161.png)
+
+Medium Clone
+
+![mediumClone](https://user-images.githubusercontent.com/56386597/229703150-0bf20ac2-0f98-403a-9b91-bac0aff7cc6b.png)
